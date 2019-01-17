@@ -14,6 +14,7 @@ typedef HXScreenFitUtil *(^ HXScreenFitHandler)(CGFloat value);
 
 @interface HXScreenFitUtil : NSObject
 
++ (HXScreenFitUtil *)ScreenFit;
 - (CGFloat (^)(CGFloat))defaultValue;
 - (HXScreenFitHandler)iphone4;
 - (HXScreenFitHandler)iphone5;

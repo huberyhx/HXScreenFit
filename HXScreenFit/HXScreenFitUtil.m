@@ -22,7 +22,11 @@ typedef NS_ENUM(NSInteger, HXScreenType) {
 
 static CGFloat TargetValue = MAXFLOAT;
 
-#pragma mark - CGFLoat
+#pragma mark - Public
++ (HXScreenFitUtil *)ScreenFit {
+    return [[HXScreenFitUtil alloc] init];
+}
+
 - (CGFloat (^)(CGFloat))defaultValue {
     return ^(CGFloat defaultValue){
         if (TargetValue == MAXFLOAT) {
@@ -35,7 +39,6 @@ static CGFloat TargetValue = MAXFLOAT;
     };
 }
 
-#pragma mark - Public
 - (HXScreenFitHandler)iphone4 {
     return ^(CGFloat value){
         [self adjustWithScreenType:HXScreenType_iPhone4 value:value];
